@@ -326,7 +326,7 @@ Error generating stack: `+o.message+`
     display: flex;
     justify-content: center;
     align-items: center;
-`,b4=({price:e,usd:t})=>e===0?"0 $":`${(e/t).toFixed(2)} $`,sf=Gt(null),L4=M2.createEffect(async()=>{const e=new Date,t=await i4.get(`http://www.cbr.ru/scripts/XML_daily.asp?date_req=${String(e.getDate()).padStart(2,"0")}/${String(e.getMonth()+1).padStart(2,"0")}/${e.getFullYear()}`),r=new DOMParser().parseFromString(t.data,"application/xml").getElementsByTagName("Valute")[13].getElementsByTagName("Value")[0].innerHTML.replace(",",".");return Number(r)});it({clock:L4.doneData,target:sf});const Ly=({inCart:e,product:t,navigate:n})=>t.mess?null:t.type==="roulette"?_.jsx(Ir,{width:"214px",onClick:()=>nf(t),children:"Открыть"}):_.jsx(Ir,{onClick:()=>e?n("/app/store/cart"):s4(t),disabled:e,width:"214px",children:e?"Перейти в корзину":"Добавить в корзину"}),Ty=F.div`
+`,b4=({price:e,usd:t})=>e===0?"0 $":`${(e/t).toFixed(2)} $`,sf=Gt(null),L4=M2.createEffect(async()=>{const e=new Date,t=await i4.get(`https://www.cbr.ru/scripts/XML_daily.asp?date_req=${String(e.getDate()).padStart(2,"0")}/${String(e.getMonth()+1).padStart(2,"0")}/${e.getFullYear()}`),r=new DOMParser().parseFromString(t.data,"application/xml").getElementsByTagName("Valute")[13].getElementsByTagName("Value")[0].innerHTML.replace(",",".");return Number(r)});it({clock:L4.doneData,target:sf});const Ly=({inCart:e,product:t,navigate:n})=>t.mess?null:t.type==="roulette"?_.jsx(Ir,{width:"214px",onClick:()=>nf(t),children:"Открыть"}):_.jsx(Ir,{onClick:()=>e?n("/app/store/cart"):s4(t),disabled:e,width:"214px",children:e?"Перейти в корзину":"Добавить в корзину"}),Ty=F.div`
     position: absolute;
     display: flex;
     align-items: center;
